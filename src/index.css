@@ -8,7 +8,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  padding: 1em;
+  padding: 1.5em;
+  background-image: url('./assets/books.jpg');
 }
 
 .container {
@@ -16,10 +17,21 @@ body {
   padding: 1.5em;
   border-radius: 10px;
   padding-bottom: 3em;
+
+  background-color: white;
+
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
 }
 
 .title {
   margin-bottom: 0.5em;
+
+  color: black;
+}
+
+.title span {
+  color: rgb(73, 31, 1);
 }
 
 .search {
@@ -27,6 +39,9 @@ body {
   padding: 0.5em;
   font-size: 1.25rem;
   margin-bottom: 0.75em;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  color: rgb(73, 31, 1);
 }
 
 .result,
@@ -34,4 +49,16 @@ body {
 .error {
   margin-left: 0.6em;
   margin-bottom: 0.25em;
+  font-size: 1.25rem;
+}
+
+.loading,
+.error {
+  color: rgb(73, 31, 1);
+}
+
+.result:hover,
+.result:focus {
+  cursor: pointer;
+  background-color: lightgray;
 }
