@@ -1,6 +1,8 @@
 import React, { Fragment, useState, useRef, useCallback } from 'react';
 import './App.css';
 import useBookSearch from './hooks/useBookSearch';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   const [query, setQuery] = useState('');
@@ -34,7 +36,13 @@ function App() {
   return (
     <Fragment>
       <div className='container'>
-        <h1 className='title'>Book Search</h1>
+        <h1 className='title'>
+          <span>
+            <FontAwesomeIcon icon={faCoffee} />
+          </span>{' '}
+          Coffee Table Book Search
+        </h1>
+        {/* 🔍  */}
         <input
           className='search'
           type='text'
