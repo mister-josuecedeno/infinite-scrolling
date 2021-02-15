@@ -6,7 +6,7 @@ Live: https://clever-allen-28bb6c.netlify.app/
 
 ## Objective
 
-Build a book search tool leveraging the openlibrary.org api.
+Build a book search tool leveraging the openlibrary.org api. The search result employs an infinite scroll.
 
 React hooks employed:
 
