@@ -44,6 +44,13 @@ body {
   color: rgb(73, 31, 1);
 }
 
+.search:not(:placeholder-shown) ~ .result-container {
+  border: 1px solid rgb(73, 31, 1);
+  height: 65vh;
+  padding: 0.5em;
+  overflow: scroll;
+}
+
 .result,
 .loading,
 .error {

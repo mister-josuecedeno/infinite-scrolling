@@ -50,23 +50,25 @@ function App() {
           placeholder='Add your search term here'
           onChange={handleSearch}
         ></input>
-        {books.map((book, index) => {
-          if (books.length === index + 1) {
-            return (
-              <div className='result' ref={lastBookElementRef} key={book}>
-                {book}
-              </div>
-            );
-          } else {
-            return (
-              <div className='result' key={book}>
-                {book}
-              </div>
-            );
-          }
-        })}
-        <div className='loading'>{loading && 'Loading...'}</div>
-        <div className='error'>{error && 'Error'}</div>
+        <div className='result-container'>
+          {books.map((book, index) => {
+            if (books.length === index + 1) {
+              return (
+                <div className='result' ref={lastBookElementRef} key={book}>
+                  {book}
+                </div>
+              );
+            } else {
+              return (
+                <div className='result' key={book}>
+                  {book}
+                </div>
+              );
+            }
+          })}
+          <div className='loading'>{loading && 'Loading...'}</div>
+          <div className='error'>{error && 'Error'}</div>
+        </div>
       </div>
     </Fragment>
   );
